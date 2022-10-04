@@ -1,0 +1,148 @@
+.navbar-fixed {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  background-color: $whiteColor;
+  border-bottom: 1px solid #edf1f7;
+.mobile-menu{
+    position: fixed;
+    top: 0;
+    overflow-y: auto;
+    width: 75%;
+    height: 100%;
+    z-index: 150;
+}
+  .container-navbar {
+    width: 1140px;
+    margin: auto;
+
+    nav {
+      @include flex(space-between, center);
+
+      position: relative;
+      padding: 22px 0;
+
+      .menu {
+        display: none;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+
+        h2 {
+          @include font(24px, 32px, 600);
+          padding-left: 16px;
+
+          a {
+            color: $primaryColor;
+          }
+        }
+      }
+
+      .nav-links {
+        display: flex;
+        margin-left: 4rem;
+        gap: 48px;
+
+        .nav-link {
+          @include font(16px, 24px, 500);
+
+          a {
+            color: $primaryColor;
+            &:hover,
+            &:focus {
+              color: $secondaryColor;
+              transition: ease-in-out all 0.3s;
+            }
+          }
+        }
+      }
+
+      .navbar-right {
+        display: flex;
+        align-items: center;
+      }
+
+      .search {
+        transform: scale(1.2);
+        margin-right: 2rem;
+
+        a {
+          color: $primaryColor;
+        }
+      }
+
+      button {
+        padding: 12px 26px;
+        font-weight: 500;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: ease-in-out all 0.55s;
+      }
+
+      .try-demo {
+        background: $whiteColor;
+        border: 1px solid #c5cee0;
+        margin-right: 8px;
+        color: $primaryColor;
+      }
+
+      .buy {
+        background-color: $secondaryColor;
+        color: $whiteColor;
+        border: none;
+      }
+    }
+  }
+
+  .d-none {
+    display: none;
+  }
+}
+
+@include xs {
+  .navbar-fixed {
+    .container-navbar {
+      width: 100%;
+
+      nav {
+        width: 100%;
+        padding: 16px;
+
+        .logo {
+          h2 {
+            @include font(20px, 26px);
+          }
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .menu {
+          display: block;
+        }
+
+        .try-demo {
+          display: none;
+        }
+
+        .buy {
+          span {
+            display: none;
+          }
+        }
+
+        .search {
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    .d-none {
+      display: block;
+    }
+  }
+}

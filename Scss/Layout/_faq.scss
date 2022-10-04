@@ -1,0 +1,100 @@
+.container-faq {
+  width: 860px;
+  margin: auto;
+  padding-top: 160px;
+
+  h2 {
+    @include font(34px, 40px, 600);
+    text-align: center;
+    color: $fontColor;
+  }
+
+  .accordion {
+    width: 800px;
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 96px;
+
+    .accordion-item {
+      padding-top: 16px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgb(214, 214, 214);
+
+      &:target {
+        .answer {
+          max-height: 20rem;
+        }
+
+        .accordion-link {
+          .add {
+            display: none;
+          }
+
+          .close {
+            display: block;
+          }
+        }
+      }
+
+      .accordion-link {
+        @include flex(space-between);
+        @include font(20px, 28px, 500);
+        color: $fontColor;
+        padding: 1rem 0;
+        
+        ion-icon {
+          color: $smallFontColor;
+          width: 24px;
+          height: 24px;
+
+          &:nth-child(2) {
+            display: none;
+          }
+        }
+      }
+
+      p {
+        @include font(16px, 24px);
+        color: $fontColor;
+      }
+
+      .note {
+        padding-top: 2rem;
+      }
+
+      .answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 650ms;
+      }
+    }
+  }
+}
+
+@include xs {
+  .container-faq {
+    width: 100%;
+    padding-top: 110px;
+
+    h2 {
+      @include font(24px, 30px);
+    }
+
+    .accordion {
+      width: 90%;
+      padding-top: 32px;
+
+      .accordion-item {
+        .accordion-link {
+          @include font(16px, 24px);
+          align-items: flex-start;
+
+          ion-icon {
+            color: $smallFontColor;
+            width: 50px;
+          }
+        }
+      }
+    }
+  }
+}

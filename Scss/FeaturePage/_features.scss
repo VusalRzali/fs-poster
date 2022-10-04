@@ -1,0 +1,96 @@
+.bg {
+  background-color: $featuresBgColor;
+}
+
+.container-features {
+  padding-top: 145px;
+
+  .features-heading {
+    text-align: center;
+    color: $fontColor;
+
+    h2 {
+      @include font(34px, 40px, 600);
+      padding-bottom: 24px;
+    }
+
+    h4 {
+      @include font(20px, 28px, 500);
+    }
+  }
+
+  .features-carts {
+    width: 1140px;
+    margin: auto;
+    padding-top: 56px;
+    padding-bottom: 120px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    
+
+    .features-cart {
+      height: 244px;
+      padding-left: 32px;
+      background: $whiteColor;
+      box-shadow: 0px 8px 32px rgba(118, 127, 154, 0.08);
+      border-radius: 16px;
+      color: $fontColor;
+
+      &:hover {
+        box-shadow: 0px 24px 32px rgba(118, 127, 154, 0.16);
+        transition: ease-in-out all 1s;
+
+      }
+      
+      .cart-info {
+        width: 310px;
+      }
+
+      img {
+        padding-top: 24px;
+      }
+
+      h4 {
+        @include font(20px, 28px, 500);
+        padding-top: 16px;
+    }
+
+      p {
+        @include font(14px, 20px);
+        padding-top: 16px;
+      }
+    }
+  }
+}
+
+@include xs {
+  .container-features {
+    padding-top: 120px;
+
+    .features-heading {
+      h2 {
+        @include font(24px, 32px);
+      }
+
+      h4 {
+        @include font(16px, 24px);
+      }
+    }
+
+    .features-carts {
+      width: 90%;
+      padding-top: 40px;
+      padding-bottom: 88px;
+      grid-template-columns: 1fr;
+
+      .features-cart {
+        padding-left: 16px;
+
+        .cart-info {
+          width: 85%;
+        }
+      }
+    }
+  }
+}

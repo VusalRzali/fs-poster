@@ -1,0 +1,148 @@
+.support {
+  height: 944px;
+  background: #ffd6d9;
+  margin-top: 136px;
+
+  .container-support {
+    width: 1140px;
+    padding-top: 112px;
+    margin: auto;
+
+    .support-up {
+      @include flex(space-between);
+
+      .support-head {
+        h2 {
+          @include font(34px, 40px, 600);
+          padding-bottom: 24px;
+          color: $fontColor;
+        }
+
+        p {
+          @include font(16px, 24px);
+          width: 488px;
+          color: $fontColor;
+        }
+      }
+    }
+  
+    button {
+      @include font(16px, 20px, 400);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: ease-in-out all 0.55s;
+    }
+
+    .try-now {
+      width: 199px;
+      height: 48px;
+      background-color: $buttonColor;
+      color: $whiteColor;
+      border: none;
+
+      &:hover {
+        transition: ease-in-out all 0.55s;
+        background-color: $secondaryColor;
+        border: 1px solid $secondaryColor;
+      }
+    }
+
+    .social-networks {
+      padding-top: 64px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+     
+      .social-network {
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 112px;
+        background: $whiteColor;
+        box-shadow: 0px 8px 32px rgba(118, 127, 154, 0.08);
+        border-radius: 16px;
+        &:hover{
+          opacity: 82%;
+          transition: .3s all;
+          }
+        }
+      }
+
+        .social-network-info {
+          padding-left: 14px;
+          position: absolute;
+          top: 20px;
+          left: 70px;
+          color: $fontColor;
+
+          h5 {
+            @include font(17px, 28px, 500);
+          }
+
+          p {
+            padding-top: 8px;
+            @include font(12px, 16px);
+          }
+        }
+
+        img {
+          position: absolute;
+          top: 16px;
+          left: 16px;
+        }
+
+        .wordpress {
+          .wordpress-icon {
+            position: absolute;
+            color: $whiteColor;
+            top: 40px;
+            left: 40px;
+            transform: translate(-50%, -50%);
+            width: 10%;
+            height: 25%;
+          }
+        }
+      }
+    }
+  
+
+@include xs {
+  .support {
+    height: 100%;
+    margin-top: 88px;
+
+    .container-support {
+      position: relative;
+      width: 100%;
+      padding: 48px 16px;
+      padding-bottom: 176px;
+
+      .support-up {
+        .support-head {
+          text-align: center;
+
+          h2 {
+            @include font(24px, 32px);
+          }
+
+          p {
+            width: auto;
+          }
+        }
+      }
+
+      .try-now {
+        position: absolute;
+        bottom: 72px;
+        width: 92%;
+        margin: auto;
+      }
+
+      .social-networks {
+        padding-top: 40px;
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+    }
+  }
+}

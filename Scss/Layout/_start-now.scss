@@ -1,0 +1,107 @@
+.container-start-now {
+  @include flex(space-between, center);
+  width: 1140px;
+  height: 240px;
+  margin: auto;
+  position: relative;
+  background: #ff708d;
+  border-radius: 16px;
+  margin-bottom: 112px;
+
+  .start-info {
+    width: 494px;
+    margin-left: 64px;
+
+    h2 {
+      @include font(48px, 64px, 600);
+      color: $whiteColor;
+      padding-bottom: 16px;
+    }
+
+    p {
+      @include font(16px, 24px);
+      color: $whiteColor;
+    }
+  }
+
+  button {
+    @include font(16px, 20px, 500);
+    margin-right: 3rem;
+    border-radius: 8px;
+    transition: ease-in-out all 0.55s;
+    cursor: pointer;
+  }
+
+  .try-demo {
+    margin-right: 1rem;
+    padding: 12px 44px;
+    background: $whiteColor;
+    border: 1px solid $whiteColor;
+    color: $primaryColor;
+
+    &:hover {
+      background: $primaryColor;
+      color: $whiteColor;
+      border: 1px solid $primaryColor;
+    }
+  }
+
+  .buy {
+    padding: 12px 34px;
+    background: $primaryColor;
+    border: 1px solid $primaryColor;
+    color: $whiteColor;
+    border: none;
+    outline: none;
+
+    &:hover {
+      background: $whiteColor;
+      color: $primaryColor;
+    }
+  }
+
+  img {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@include xs {
+  .container-start-now {
+    width: 90%;
+    height: 557px;
+    flex-direction: column;
+    margin-bottom: 88px;
+
+    .start-info {
+      width: 85%;
+      margin: 48px 24px;
+
+      h2 {
+        @include font(34px, 40px);
+        width: 70%;
+        padding-bottom: 32px;
+      }
+    }
+
+    button {
+      width: 282px;
+      margin: 0 36px;
+    }
+
+    .try-demo {
+      margin-bottom: 140px;
+    }
+
+    .buy {
+      position: relative;
+      z-index: 1;
+      bottom: 116px;
+      padding: 12px 44px;
+    }
+  }
+
+  img {
+    left: 0;
+  }
+}

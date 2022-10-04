@@ -1,0 +1,160 @@
+.container-service {
+  width: 860px;
+  padding-top: 96px;
+  margin: auto;
+
+  .service-heading {
+    text-align: center;
+
+    h2 {
+      @include font(34px, 40px, 600);
+      padding-bottom: 24px;
+      color: $fontColor;
+    }
+
+    p {
+      @include font(16px, 24px);
+      width: 384px;
+      margin: auto;
+      padding-bottom: 56px;
+      color: $smallFontColor;
+    }
+  }
+}
+
+.customer-satisfaction {
+  position: relative;
+  height: 512px;
+  margin-top: 64px;
+  background: $secondaryBgColor;
+
+  .customer-heading {
+    margin: auto;
+    width: 560px;
+    text-align: center;
+
+    h2 {
+      @include font(34px, 40px, 600);
+      padding-top: 64px;
+      color: $fontColor;
+    }
+
+    p {
+      @include font(16px, 24px);
+      padding-top: 72px;
+      color: $fontColor;
+    }
+  }
+
+  .about-customer {
+    padding-top: 56px;
+    @include flex(center);
+
+    .customer-info {
+      padding-top: 5px;
+      padding-left: 16px;
+
+      h5 {
+        @include font(20px, 28px, 500);
+        color: $primaryColor;
+      }
+
+      p {
+        @include font(16px, 24px);
+        color: $smallFontColor;
+      }
+    }
+  }
+
+  .arrow-left {
+    position: absolute;
+    top: 235px;
+    left: 112px;
+  }
+
+  .arrow-right {
+    position: absolute;
+    top: 235px;
+    right: 112px;
+  }
+}
+
+@include xs {
+  .container-service {
+    width: 100%;
+    padding-top: 64px;
+
+    .service-heading {
+      width: 100%;
+      padding: 0 32px;
+
+      h2 {
+        @include font(24px, 32px);
+      }
+
+      p {
+        width: 100%;
+        padding-bottom: 24px;
+      }
+    }
+
+    img {
+      width: 100%;
+      padding: 0 16px;
+    }
+  }
+
+  .customer-satisfaction {
+    height: 552px;
+    margin-top: 56px;
+
+    .customer-heading {
+      width: 100%;
+
+      h2 {
+        @include font(24px, 32px);
+        padding: 0 32px;
+        padding-top: 56px;
+      }
+
+      p {
+        text-align: left;
+        padding: 0 24px;
+        padding-top: 56px;
+      }
+    }
+
+    .about-customer {
+      padding-left: 16px;
+      justify-content: flex-start;
+    }
+
+    .arrow-left {
+      display: none;
+    }
+
+    .arrow-right {
+      display: none;
+    }
+
+    .dots {
+      width: 15%;
+      margin: 40px auto;
+      @include flex(space-evenly);
+
+      .dot {
+        height: 8px;
+        width: 8px;
+        background: #e4e9f2;
+        border-radius: 50%;
+      }
+
+      .dot-active {
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+        background: $smallFontColor;
+      }
+    }
+  }
+}

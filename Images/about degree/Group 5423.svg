@@ -1,0 +1,23 @@
+<svg width="1216" height="166" viewBox="0 0 1216 166" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_59_601" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="384" height="166">
+<rect width="384" height="166" fill="#FFD339"/>
+</mask>
+<g mask="url(#mask0_59_601)">
+<circle cx="192" cy="210" r="168" fill="white" fill-opacity="0.08"/>
+<circle cx="192" cy="203" r="88" fill="white" fill-opacity="0.16"/>
+</g>
+<mask id="mask1_59_601" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="416" y="0" width="384" height="166">
+<rect x="416" width="384" height="166" fill="#FFD339"/>
+</mask>
+<g mask="url(#mask1_59_601)">
+<circle cx="608" cy="210" r="168" fill="white" fill-opacity="0.08"/>
+<circle cx="608" cy="203" r="88" fill="white" fill-opacity="0.16"/>
+</g>
+<mask id="mask2_59_601" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="832" y="0" width="384" height="166">
+<rect x="832" width="384" height="166" fill="#FFD339"/>
+</mask>
+<g mask="url(#mask2_59_601)">
+<circle cx="1024" cy="210" r="168" fill="white" fill-opacity="0.08"/>
+<circle cx="1024" cy="203" r="88" fill="white" fill-opacity="0.16"/>
+</g>
+</svg>

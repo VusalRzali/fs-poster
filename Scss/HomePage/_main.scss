@@ -1,0 +1,114 @@
+.container-main {
+  width: 860px;
+  margin: auto;
+
+  main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 160px;
+
+    h1 {
+      @include font(60px, 72px, 600);
+      color: $primaryColor;
+
+      span {
+        color: $secondaryColor;
+      }
+    }
+
+    p {
+      @include font(16px, 24px);
+      margin-top: 32px;
+      color: $smallFontColor;
+    }
+
+    button {
+      @include font(16px, 20px, 500);
+      margin-top: 56px;
+      margin-right: 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: ease-in-out all 0.55s;
+    }
+
+    .try-now {
+      width: 199px;
+      height: 48px;
+      background-color: $buttonColor;
+      color: $whiteColor;
+      border: none;
+      outline: none;
+
+      &:hover {
+        background-color: $secondaryColor;
+        border: 1px solid $secondaryColor;
+      }
+    }
+
+    .watch {
+      width: 184px;
+      height: 48px;
+      background-color: $whiteColor;
+      border: 1px solid $buttonColor;
+      color: $buttonColor;
+
+      &:hover {
+        background-color: $buttonColor;
+        color: $whiteColor;
+      }
+    }
+
+    img {
+      position: relative;
+      width: 100%;
+      margin-top: 72px;
+      z-index: 1;
+    }
+  }
+}
+
+@include xs {
+  .container-main {
+    width: 100%;
+
+    main {
+      width: 90%;
+      margin: auto;
+      padding-top: 130px;
+
+      h1 {
+        @include font(24px, 32px);
+      }
+
+      button {
+        margin-top: 36px;
+        margin-right: 0;
+      }
+
+      .buttons {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        order: 1;
+      }
+
+      .try-now {
+        width: 248px;
+      }
+
+      .watch {
+        width: 248px;
+        margin-top: 24px;
+      }
+
+      img {
+        margin-top: 36px;
+      }
+    }
+  }
+}
+@inc
+.test{
+  margin: auto;
+}

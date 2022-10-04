@@ -1,0 +1,139 @@
+footer {
+  @include flex(center, center, column);
+  background: $secondaryBgColor;
+  height: 400px;
+
+  .footer-up {
+    @include flex(space-between);
+    width: 1140px;
+    margin: auto;
+    padding-top: 36px;
+
+    .fs-poster {
+      width: 208px;
+
+      .logo {
+        display: flex;
+        align-items: center;
+
+        h2 {
+          @include font(24px, 32px, 600);
+          padding-left: 16px;
+          color: $primaryColor;
+        }
+      }
+      p {
+        @include font(16px, 24px);
+        padding-top: 32px;
+        color: $primaryColor;
+      }
+    }
+
+    .company,
+    .product {
+      padding-top: 6px;
+      color: $fontColor;
+      padding-right: 60px;
+
+      h3 {
+        @include font(20px, 28px, 500);
+        padding-bottom: 24px;
+      }
+
+      h4 {
+        @include font(16px, 24px, 400);
+        padding-bottom: 16px;
+      }
+    }
+
+    .contact {
+      padding-top: 6px;
+      color: $fontColor;
+      padding-right: 60px;
+
+      h3 {
+        font-weight: 500;
+      }
+
+      .contact-email {
+        padding-top: 24px;
+        display: flex;
+
+        p {
+          padding-left: 12px;
+        }
+      }
+
+      .icon {
+        padding-top: 48px;
+      }
+    }
+  }
+
+  .footer-down {
+    width: 1140px;
+    margin: auto;
+    @include flex(space-between);
+
+    .down-left {
+      display: flex;
+      align-items: center;
+
+      p {
+        padding-left: 8px;
+      }
+    }
+
+    .down-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+  }
+}
+
+@include xs {
+  footer {
+    height: 100%;
+
+    .footer-up {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+
+      .fs-poster {
+        text-align: center;
+
+        .logo {
+          justify-content: center;
+        }
+      }
+
+      .company,
+      .product,
+      .contact {
+        padding-top: 40px;
+        @include flex(null, center, column);
+
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    .icon {
+      padding-bottom: 24px;
+    }
+
+    .footer-down {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 0;
+      border-top: 1px solid #edf1f7;
+
+      .down-right {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.container-benefit {
+  width: 1140px;
+  margin: auto;
+
+  .benefits-up {
+    @include flex(space-between);
+
+    .benefits-about {
+      display: flex;
+      flex-direction: column;
+      width: 384px;
+      gap: 24px;
+
+      h5 {
+        @include font(20px, 28px, 500);
+        color: $buttonColor;
+      }
+
+      h3 {
+        @include font(34px, 40px, 600);
+        color: $fontColor;
+      }
+
+      p {
+        @include font(16px, 24px);
+        color: $smallFontColor;
+      }
+    }
+
+    img {
+      margin-right: 80px;
+    }
+  }
+
+  .benefits-down {
+    @include flex(space-between);
+    padding-top: 100px;
+    flex-wrap: wrap;
+
+    .icon-cart {
+      @include flex(null, center, column);
+      margin-top: 96px;
+      width: 30%;
+
+      h4 {
+        padding-top: 32px;
+        @include font(20px, 28px, 500);
+        color: $fontColor;
+      }
+
+      p {
+        @include font(14px, 20px);
+        padding-top: 16px;
+        text-align: center;
+        color: $fontColor;
+      }
+    }
+  }
+}
+
+@include xs {
+  .container-benefit {
+    width: 100%;
+
+    .benefits-up {
+      @include flex(null, center, column);
+      padding: 0 16px;
+
+      .benefits-about {
+        width: 100%;
+        padding-top: 100px;
+        text-align: center;
+
+        h3 {
+          @include font(24px, 32px);
+        }
+
+        p {
+          padding-bottom: 40px;
+        }
+      }
+
+      img {
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+    .benefits-down {
+      padding-top: 40px;
+      flex-direction: column;
+
+      .icon-cart {
+        padding-left: 40px;
+        margin-top: 56px;
+        width: 90%;
+      }
+    }
+  }
+}

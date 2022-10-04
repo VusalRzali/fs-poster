@@ -1,0 +1,12 @@
+@mixin flex($jContent, $alItems: null, $fDirection: null) {
+  display: flex;
+  justify-content: $jContent;
+  align-items: $alItems;
+  flex-direction: $fDirection;
+}
+
+@mixin font($fSize, $lHeight, $fWeight: null) {
+  font-size: $fSize;
+  line-height: $lHeight;
+  font-weight: $fWeight;
+}
